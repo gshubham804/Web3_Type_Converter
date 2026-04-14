@@ -1,0 +1,4 @@
+[build]
+  publish = "src"
+
+# No build step — static HTML/CSS/JS
