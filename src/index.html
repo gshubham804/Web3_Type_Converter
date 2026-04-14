@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Web3 Type Converter | Convert bytes32, hex, string and number online</title>
+    <meta
+      name="description"
+      content="Free Web3 Type Converter to convert bytes32 and hex to string or number, and convert string/number back to bytes32. Fast, simple, and browser-based."
+    >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta
+      name="keywords"
+      content="web3 type converter, bytes32 converter, hex to string, string to bytes32, bytes32 to number, ethereum tools"
+    >
+    <meta name="author" content="Web3 Type Converter">
+    <meta name="theme-color" content="#9AB17A">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Web3 Type Converter">
+    <meta
+      property="og:description"
+      content="Convert bytes32, hex, string and number online. Fast browser-based Ethereum utility."
+    >
+    <meta property="og:site_name" content="Web3 Type Converter">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Web3 Type Converter">
+    <meta
+      name="twitter:description"
+      content="Convert bytes32, hex, string and number online with a fast browser-based Web3 tool."
+    >
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Web3 Type Converter",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "description": "Convert bytes32/hex to string or number and convert string/number to bytes32 directly in the browser."
+      }
+    </script>
+  </head>
+  <body>
+    <main class="page">
+      <div class="container">
+        <header>
+          <div class="header-top">
+            <div class="brand">
+              <img src="assets/logo.svg" alt="Web3 Type Converter logo" class="brand-logo">
+              <h1>Web3 Type Converter</h1>
+            </div>
+            <button type="button" class="donate-btn" id="open-donate-modal">Donate</button>
+          </div>
+          <h2>Convert bytes32/hex to string or number (and vice versa).</h2>
+        </header>
+
+        <section class="converter">
+          <div class="panel input-panel">
+            <label for="input">Input value</label>
+            <textarea id="input" placeholder="Enter a value to convert..."></textarea>
+          </div>
+
+          <div class="controls-panel">
+            <p class="controls-title">Convert to</p>
+            <div class="action-buttons" id="to">
+              <button type="button" class="convert-btn" data-type="bytes32">bytes32 / hex</button>
+              <button type="button" class="convert-btn" data-type="number">number / decimal</button>
+              <button type="button" class="convert-btn is-active" data-type="string">string / utf-8</button>
+            </div>
+
+            <div class="checkbox-field" id="apply-padding-container">
+              <input type="checkbox" id="apply-padding">
+              <label for="apply-padding">Apply padding</label>
+            </div>
+          </div>
+
+          <div class="panel output-panel">
+            <label for="output">Converted output</label>
+            <textarea id="output" placeholder="Your converted result will appear here."></textarea>
+          </div>
+        </section>
+
+        <section class="note">
+          <p>All conversions run locally in your browser. No data is stored or sent.</p>
+        </section>
+      </div>
+    </main>
+
+    <div class="modal-backdrop" id="donate-modal" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="donate-title">
+        <button type="button" class="modal-close" id="close-donate-modal" aria-label="Close donate modal">&times;</button>
+        <h3 id="donate-title">Donate (BEP-20 USDT)</h3>
+        <p class="donate-text">Send BEP-20 USDT to this address:</p>
+        <p class="donate-address" id="donate-address">0xe9f8f35b066b99142589145b144e969cf1254706</p>
+        <button type="button" class="copy-btn" id="copy-donate-address">Copy Address</button>
+        <p class="copy-feedback" id="copy-feedback" aria-live="polite"></p>
+        <img
+          class="donate-qr"
+          alt="QR code for donation address"
+          src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=0xe9f8f35b066b99142589145b144e969cf1254706"
+        >
+      </div>
+    </div>
+
+    <script src="js/web3.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
